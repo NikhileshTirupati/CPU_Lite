@@ -1,0 +1,135 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cpu_top
+Version: S-2021.06-SP4
+Date   : Mon Oct 12 16:40:09 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p75v25c   Library: saed32lvt_ss0p75v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: u_core/u_ex_mem/rd_mem_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_psr/flags_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cpu_top            540000                saed32lvt_ss0p75v25c
+  cpu_core           35000                 saed32lvt_ss0p75v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_core/u_ex_mem/rd_mem_reg[2]/CLK (DFFARX1_LVT)         0.00 #     0.00 r
+  u_core/u_ex_mem/rd_mem_reg[2]/Q (DFFARX1_LVT)           0.24       0.24 r
+  u_core/U387/Y (XOR2X1_LVT)                              0.17       0.42 f
+  u_core/U388/Y (OR2X1_LVT)                               0.08       0.50 f
+  u_core/U392/Y (OR4X1_LVT)                               0.21       0.71 f
+  u_core/U200/Y (INVX2_LVT)                               0.10       0.81 r
+  u_core/U398/Y (OR4X1_LVT)                               0.17       0.99 r
+  u_core/U399/Y (INVX2_LVT)                               0.07       1.06 f
+  u_core/U202/Y (NOR2X2_LVT)                              0.20       1.26 r
+  u_core/U347/Y (AO222X1_LVT)                             0.22       1.49 r
+  u_core/U700/Y (INVX2_LVT)                               0.11       1.59 f
+  u_core/U952/Y (NOR2X0_LVT)                              0.17       1.76 r
+  u_core/U1002/S (FADDX1_LVT)                             0.18       1.94 f
+  u_core/U998/CO (FADDX1_LVT)                             0.13       2.07 f
+  u_core/U1043/CO (FADDX1_LVT)                            0.13       2.20 f
+  u_core/U1052/CO (FADDX1_LVT)                            0.12       2.32 f
+  u_core/U1113/CO (FADDX1_LVT)                            0.13       2.45 f
+  u_core/U1137/S (FADDX1_LVT)                             0.21       2.67 r
+  u_core/U1129/S (FADDX1_LVT)                             0.18       2.85 f
+  u_core/U1171/Y (NAND2X0_LVT)                            0.08       2.93 r
+  u_core/U59/Y (INVX0_LVT)                                0.03       2.96 f
+  u_core/U1174/Y (AOI21X1_LVT)                            0.15       3.11 r
+  u_core/U69/Y (OAI21X1_LVT)                              0.13       3.25 f
+  u_core/U1818/Y (AOI21X1_LVT)                            0.14       3.38 r
+  u_core/U127/Y (OAI21X1_LVT)                             0.13       3.51 f
+  u_core/U2575/CO (FADDX1_LVT)                            0.12       3.63 f
+  u_core/U2431/CO (FADDX1_LVT)                            0.12       3.76 f
+  u_core/U2492/CO (FADDX1_LVT)                            0.12       3.88 f
+  u_core/U2910/CO (FADDX1_LVT)                            0.12       4.00 f
+  u_core/U2233/CO (FADDX1_LVT)                            0.12       4.13 f
+  u_core/U2527/CO (FADDX1_LVT)                            0.12       4.25 f
+  u_core/U2735/CO (FADDX1_LVT)                            0.12       4.37 f
+  u_core/U143/Y (XOR2X1_LVT)                              0.10       4.47 f
+  u_core/U1908/Y (AOI22X1_LVT)                            0.15       4.62 r
+  u_core/U1910/Y (NAND3X0_LVT)                            0.05       4.66 f
+  u_core/U1916/Y (OR3X1_LVT)                              0.13       4.80 f
+  u_core/U1917/Y (AO21X1_LVT)                             0.07       4.86 f
+  u_core/U1970/Y (OR3X1_LVT)                              0.13       4.99 f
+  u_core/U2473/Y (OR3X1_LVT)                              0.12       5.12 f
+  u_core/U2474/Y (OR3X1_LVT)                              0.09       5.20 f
+  u_core/U2475/Y (OR3X1_LVT)                              0.09       5.29 f
+  u_core/U2975/Y (OAI21X1_LVT)                            0.17       5.46 r
+  u_core/U2976/Y (MUX21X1_LVT)                            0.09       5.55 r
+  u_core/u_psr/flags_reg[0]/D (DFFARX1_LVT)               0.00       5.55 r
+  data arrival time                                                  5.55
+
+  clock clk (rise edge)                                   6.66       6.66
+  clock network delay (ideal)                             0.00       6.66
+  clock uncertainty                                      -0.66       6.00
+  u_core/u_psr/flags_reg[0]/CLK (DFFARX1_LVT)             0.00       6.00 r
+  library setup time                                     -0.08       5.92
+  data required time                                                 5.92
+  --------------------------------------------------------------------------
+  data required time                                                 5.92
+  data arrival time                                                 -5.55
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.37
+
+
+  Startpoint: rs_winc (input port clocked by mem_clk)
+  Endpoint: u_mem/u_resp_fifo/wfull_reg
+            (rising edge-triggered flip-flop clocked by mem_clk)
+  Path Group: mem_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cpu_top            540000                saed32lvt_ss0p75v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock mem_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    8.50       8.50 r
+  rs_winc (in)                                            0.00       8.50 r
+  U54/Y (AND2X1_LVT)                                      0.08       8.58 r
+  U55/Y (NAND2X0_LVT)                                     0.06       8.63 f
+  U6/Y (INVX1_LVT)                                        0.07       8.70 r
+  U864/Y (NAND3X0_LVT)                                    0.22       8.92 f
+  U5/Y (INVX1_LVT)                                        0.25       9.18 r
+  U865/Y (INVX2_LVT)                                      0.09       9.26 f
+  U1171/Y (AO22X1_LVT)                                    0.13       9.39 f
+  U1173/Y (AO22X1_LVT)                                    0.13       9.52 f
+  U1177/Y (OAI22X1_LVT)                                   0.15       9.67 r
+  U1178/Y (AO221X1_LVT)                                   0.08       9.75 r
+  U1180/Y (NOR3X0_LVT)                                    0.10       9.86 f
+  u_mem/u_resp_fifo/wfull_reg/D (DFFARX1_LVT)             0.00       9.86 f
+  data arrival time                                                  9.86
+
+  clock mem_clk (rise edge)                              14.28      14.28
+  clock network delay (ideal)                             0.00      14.28
+  clock uncertainty                                      -1.42      12.86
+  u_mem/u_resp_fifo/wfull_reg/CLK (DFFARX1_LVT)           0.00      12.86 r
+  library setup time                                     -0.09      12.77
+  data required time                                                12.77
+  --------------------------------------------------------------------------
+  data required time                                                12.77
+  data arrival time                                                 -9.86
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.92
+
+
+1

@@ -1,0 +1,54 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-group mem_clk
+	-sort_by slack
+Design : cpu_top
+Version: S-2021.06-SP2
+Date   : Mon Oct 12 16:52:14 2026
+****************************************
+
+
+  Startpoint: rs_winc (input port clocked by mem_clk)
+  Endpoint: u_mem/u_resp_fifo/wfull_reg
+               (rising edge-triggered flip-flop clocked by mem_clk)
+  Path Group: mem_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock mem_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    8.50       8.50 r
+  rs_winc (in)                                            0.00       8.50 r
+  U54/Y (AND2X1_LVT)                                      0.08       8.58 r
+  U55/Y (NAND2X0_LVT)                                     0.06       8.63 f
+  U6/Y (INVX1_LVT)                                        0.07       8.70 r
+  U864/Y (NAND3X0_LVT)                                    0.22       8.92 f
+  U5/Y (INVX1_LVT)                                        0.25       9.18 r
+  U865/Y (INVX2_LVT)                                      0.09       9.26 f
+  U1171/Y (AO22X1_LVT)                                    0.13       9.39 f
+  U1173/Y (AO22X1_LVT)                                    0.13       9.52 f
+  U1177/Y (OAI22X1_LVT)                                   0.15       9.67 r
+  U1178/Y (AO221X1_LVT)                                   0.08       9.75 r
+  U1180/Y (NOR3X0_LVT)                                    0.10       9.86 f
+  u_mem/u_resp_fifo/wfull_reg/D (DFFARX1_LVT)             0.00       9.86 f
+  data arrival time                                                  9.86
+
+  clock mem_clk (rise edge)                              14.28      14.28
+  clock network delay (ideal)                             0.00      14.28
+  clock reconvergence pessimism                           0.00      14.28
+  clock uncertainty                                      -1.42      12.86
+  u_mem/u_resp_fifo/wfull_reg/CLK (DFFARX1_LVT)                     12.86 r
+  library setup time                                     -0.09      12.77
+  data required time                                                12.77
+  ------------------------------------------------------------------------------
+  data required time                                                12.77
+  data arrival time                                                 -9.86
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        2.92
+
+
+1
